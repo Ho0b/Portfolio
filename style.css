@@ -1,0 +1,214 @@
+/*  colors */
+:root{
+    --pastelPink: #F8C7CC;
+    --lightGreen: #81A684;
+    --gGreen: #57886C;
+    --duskGreen: #466060;
+    --darkGreen: #0E0F19;
+    --smoothFont: 'Josefin Sans', sans-serif;
+}
+
+
+body{
+    background-color: var(--darkGreen);
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    scroll-snap-align: center;
+    scroll-behavior: smooth;
+}
+
+
+
+/*   THE CLASS SECTION   */
+
+.main-header{
+    background-color: var(--pastelPink);
+    display: flex;
+    flex-flow: row nowrap;
+    font-family: var(--smoothFont);
+    font-weight: bold;
+    height: 10%;
+    padding: 10px;
+}
+.main-header-left{
+    position: relative;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    font-size: 2em;
+}
+
+.main-header-right{
+    width: 50%;
+}
+.main-header-right ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: right;
+    margin: 0px;
+}
+.main-header-right ul li{
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0px 10px 0px 10px; 
+    font-family: inherit;
+    font-weight: inherit;
+    width: auto;
+}
+.main-header-right ul li a{
+    display: flex;
+    text-decoration: none;
+    font-size: 1em;
+    background-color: var(--gGreen);
+    border-radius: 10px;
+    padding: 1% 75px 1% 1%;
+    height: 30px;
+    width: 30px;
+    margin: auto;
+}
+
+.sections{
+    font-family: var(--smoothFont);
+    margin: 0;
+    padding: 0;
+    border-radius: 0px 0px 15px 15px;
+}
+.sections-grid{
+    display: grid;
+    grid-template: 50% / 50% 50%;
+    border-radius: 10px;
+}
+.sections h1{
+    position: relative;
+    text-align: center;
+    font-size: 3em;
+    top: 120px;
+    left: -10%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*   THE ID SECTION   */
+
+
+#wrapper{
+    margin: 0;
+    padding: 0;
+}
+
+
+#text-big{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+}
+
+#p-big{
+    font-family: var(--smoothFont);
+    font-size: larger;
+    color: aliceblue;
+    line-height: 1.6;
+}
+
+#box-1{
+    background-color: var(--lightGreen);
+}
+#box-2{
+    background-color: var(--duskGreen);
+}
+
+#floater-title{
+    border-radius: 0px 0px 20px 20px;
+    margin-left: 10%;
+    margin-right: auto;
+    float: left;
+    height: 30px;
+    width: 150px;
+    background-color: var(--pastelPink);
+    text-align: center;
+}
+
+#header-button-center{
+    text-align: center; 
+    position: relative;
+    margin:auto;
+    left: 50%;
+    height: 50%;
+    right: auto;
+}
+
+#centre{
+    margin: auto;
+    position: relative;
+    width: 80%;
+    height: 80%;
+}
+
+/* animation */
+
+#bob-ani{
+    animation: bobUpDown 3s cubic-bezier(.65,.05,.36,1) infinite;
+    animation-direction: alternate;
+}
+
+@keyframes bobUpDown{
+    0%{
+        translate: 0 -10px;
+    }
+   100%{
+       translate: 0 10px;
+    }
+}
+
+.main-header-right ul li a:hover{
+    animation: GradSwipe 3s ease-in-out 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes GradSwipe{
+    0%{
+        background-color: var(--gGreen);
+    }
+    100%{
+        background-color: white;
+    }
+}
+
+
+
+/* MEDIA QUEIRES */
+@media (min-width: 600px){
+    #header-button-center{
+        text-align: center; 
+        position: relative;
+        margin:auto;
+        height: 50%;
+        left: 50%;
+        right: auto;
+    }
+    .main-header-right ul li a{
+        padding: 1% 85px 1% 1%;
+    }
+    #floater-title{
+        width: 175px;
+    }
+    
+
+}
+
+@media (min-width: 1024px){
+    #header-button-center{
+        text-align: center; 
+        position: relative;
+        margin:auto;
+        left: 50%;
+        right: auto;
+        height: 50%;
+    }
+    .main-header-right ul li a{
+        padding: 1% 100px 1% 1%;
+    }
+}
