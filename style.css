@@ -8,59 +8,88 @@
     --smoothFont: 'Josefin Sans', sans-serif;
 }
 
+* {
+    font-family: var(--smoothFont);
+}
 
+a:link, a:hover, a:visited, a:active{
+    color: var(--darkGreen);
+}
 body{
-    background-color: var(--darkGreen);
+    background-color:#F8C7CC;
     margin: 0px;
     padding: 0px;
     overflow: auto;
-    scroll-snap-align: center;
-    scroll-behavior: smooth;
 }
 
-
-
-/*   THE CLASS SECTION   */
-
-.main-header{
-    background-color: var(--pastelPink);
-    display: flex;
-    flex-flow: row nowrap;
-    font-family: var(--smoothFont);
-    font-weight: bold;
-    height: 10%;
-    padding: 10px;
-}
-.main-header-left{
-    position: relative;
-    margin: auto;
-    width: 50%;
-    text-align: center;
+p{
     font-size: 2em;
+    font-weight: bold;
+    text-align: left;
 }
 
-.main-header-right{
-    width: 50%;
-}
-.main-header-right ul{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: right;
+
+header{
+    background-color: var(--pastelPink);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 0px;
+    font-family: inherit;
+    height: 30px;
+    width: 100%;
+    z-index: 1000;
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin: 0px;
 }
-.main-header-right ul li{
-    display: inline-flex;
+.stick{
+    height: 50px;
+    position: sticky;
+    background: none;
+    top: 0px;
+}
+.stick h1{
+    visibility: visible;
+}
+.fixed{
+    position: static;
+}
+.fixed h1{
+    visibility: hidden;
+    transition: .3s;
+}
+
+header .left{
+    width: 100%;
+    height: 30px;
+
+}
+header .left h1{
+    text-align: center;
+    margin: 0px;
+} 
+header .right{
+    height: 30px;
+}
+header .right ul{
+    display: flex;
+    justify-content: right;
+    height: 30px;
+    margin: 0;
+    
+}
+header .right ul li{
     list-style-type: none;
     margin: 0px 10px 0px 10px; 
     font-family: inherit;
     font-weight: inherit;
     width: auto;
 }
-.main-header-right ul li a{
+header .right ul li a{
     display: flex;
+    flex-flow: row nowrap;
     text-decoration: none;
     font-size: 1em;
-    background-color: var(--gGreen);
     border-radius: 10px;
     padding: 1% 75px 1% 1%;
     height: 30px;
@@ -69,15 +98,13 @@ body{
 }
 
 .sections{
-    font-family: var(--smoothFont);
+    font-family: inherit;
     margin: 0;
     padding: 0;
     border-radius: 0px 0px 15px 15px;
 }
-.sections-grid{
-    display: grid;
-    grid-template: 50% / 50% 50%;
-    border-radius: 10px;
+.sections-proceeding{
+    border-radius: 15px 15px 15px 15px;
 }
 .sections h1{
     position: relative;
@@ -87,9 +114,44 @@ body{
     left: -10%;
     margin: 0;
     padding: 0;
+    z-index: 999;
 }
 
-
+.form-grid{
+    padding: 50px;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 60px 60px 60px 60px;
+    gap: 20px;
+}
+.form-grid label {
+    height: 50%;
+    padding: 10px;
+    background-color: var(--darkGreen);
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    border: 5px solid var(--gGreen);
+}
+.form-grid input {
+    background-color: var(--darkGreen);
+    border-radius: 10px 10px 10px 10px;
+    border: 5px solid var(--gGreen);
+    max-width: 100%;
+    color: white;
+}
+.form-grid textarea{
+    background-color: var(--darkGreen);
+    border-radius: 10px 10px 10px 10px;
+    border: 5px solid var(--gGreen);
+    max-width: 100%;
+    padding: 30px;
+    color: white;
+    
+}
 
 /*   THE ID SECTION   */
 
@@ -99,53 +161,26 @@ body{
     padding: 0;
 }
 
-
-#text-big{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: medium;
-    font-weight: bold;
-}
-
-#p-big{
-    font-family: var(--smoothFont);
-    font-size: larger;
-    color: aliceblue;
-    line-height: 1.6;
-}
-
-#box-1{
-    background-color: var(--lightGreen);
-}
-#box-2{
-    background-color: var(--duskGreen);
-}
-
 #floater-title{
     border-radius: 0px 0px 20px 20px;
-    margin-left: 10%;
+    margin-left: 50px;
     margin-right: auto;
     float: left;
     height: 30px;
     width: 150px;
-    background-color: var(--pastelPink);
+    text-align: center;
+    font-family: var(--smoothFont);
+    font-size: 1.5em;
+}
+
+#center-nav-label{
+    position: relative;
+    margin: auto;
+    height: 50%;
+    left: 50%;
     text-align: center;
 }
 
-#header-button-center{
-    text-align: center; 
-    position: relative;
-    margin:auto;
-    left: 50%;
-    height: 50%;
-    right: auto;
-}
-
-#centre{
-    margin: auto;
-    position: relative;
-    width: 80%;
-    height: 80%;
-}
 
 /* animation */
 
@@ -163,14 +198,14 @@ body{
     }
 }
 
-.main-header-right ul li a:hover{
-    animation: GradSwipe 3s ease-in-out 1;
-    animation-fill-mode: forwards;
+header .right ul li a:hover{
+    animation: GradSwipe 3s cubic-bezier(.65,.05,.36,1) 1;
+    animation-fill-mode: both;
 }
 
 @keyframes GradSwipe{
     0%{
-        background-color: var(--gGreen);
+        background: none;
     }
     100%{
         background-color: white;
@@ -189,13 +224,9 @@ body{
         left: 50%;
         right: auto;
     }
-    .main-header-right ul li a{
+    header .right ul li a{
         padding: 1% 85px 1% 1%;
     }
-    #floater-title{
-        width: 175px;
-    }
-    
 
 }
 
@@ -208,7 +239,7 @@ body{
         right: auto;
         height: 50%;
     }
-    .main-header-right ul li a{
+    header .right ul li a{
         padding: 1% 100px 1% 1%;
     }
 }

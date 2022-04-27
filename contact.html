@@ -6,24 +6,43 @@
         </title>
         <meta charset="utf-8"> 
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet"> 
+        
     </head> 
 
-    <div class="main-header"> 
-        <div class="main-header-left">
-            Connect with me!
-        </div>
-        <div class="main-header-right">
-            <div>
-                <ul>
-                    <li><a href="index.html"><img src="content/home.svg" alt="home icon"></a></li>
-                    <li><a href="contact.html"><img src="content/contact.svg" alt="contact icon"></a></li>
-                </ul>
-            </div>
-            
-        </div>
-    </div>
-
+    
     <body> 
+        
+    <header>
+        <div class="left">
+            <h1 id="center-item">Contact Me!</h1>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="index.html"><img src="content/home.svg" alt="home icon"><span id="center-nav-label">Home</span></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div>
+
+        <form class="form-grid" style="height: 1180px;" action="POST" target="_blank">
+            <label for="name"> Name</label>
+            <input type="name" name="Name" id="name">
+
+            <label for="email"> Email </label>
+            <input type="email" name="Email" id="email">
+
+            <label for="message"> Message </label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+
+            <input type="submit" value="Submit">
+
+        </form>
+
+    </div>
 
     </body> 
 </html> 
