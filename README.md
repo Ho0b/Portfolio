@@ -1,3 +1,3 @@
 # PortfolioWeb
 
-website for a brain doodoo like me
+website for a myself
