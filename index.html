@@ -9,75 +9,84 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet"> 
+        <link rel="icon" type="image/x-icon" href="content/favicn.svg">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         
+        
     </head> 
 
-    <div id="wrapper">
-
     <body>
+        
+    <script src="JS/homepage.js"></script>
+    <div id="goBackUp" onclick="window.scrollTo(0, 0)" style="visibility: hidden;"><img src="content/uparrow.svg" alt="up arrow"></div>
+    
+    
+    <div class="mnu-btn" onclick="menuBtn()">
+        <div class="mnu-btn_burger"></div>
+    </div>
+    <div id="menu">
+        <div id="hideli">
+            <ul>
+                <li><a href="index.html"><img src="content/home.svg" alt="home icon"><span class="text-center">Home</span></a></li>
+                <li><a href="contact.html"><img src="content/contact.svg" alt="contact icon"><span class="text-center">Contact</span></a></li>
+                <li><a href="aboutme.html"><img src="content/about.svg" alt="about icon"><span class="text-center">About</span></a></li>
+                <li><a href="https://www.youtube.com/channel/UC5dQA0jgp4UpfdWrmfvPFMg"><span class="text-center">Youtube</span></a></li>
+                <li><a href="https://www.instagram.com/netr4h/"><span class="text-center">Instagram</span></a></li>
+            </ul>
+            </div>
+    </div>
 
-    <script src="JS/app.js" type="text/javascript"></script>
-
-    <header class="fixed">
-        <div class="left">
-            <h1>Netra Hun</h1>
-        </div>
+    <header>
         <div class="right">
             <ul>
-                <li><a href="index.html"><img src="content/home.svg" alt="home icon"><span id="center-nav-label">Home</span></a></li>
-                <li><a href="contact.html"><img src="content/contact.svg" alt="contact icon"><span id="center-nav-label">Contact</span></a></li>
+                <li><a href="index.html"><img src="content/home.svg" alt="home icon"><span class="center-nav-label">Home</span></a></li>
+                <li><a href="contact.html"><img src="content/contact.svg" alt="contact icon"><span class="center-nav-label">Contact</span></a></li>
+                <li><a href="aboutme.html"><img src="content/about.svg" alt="about icon"><span class="center-nav-label">About</span></a></li>
+                <li><a href="https://www.youtube.com/channel/UC5dQA0jgp4UpfdWrmfvPFMg"><span class="center-nav-label">Youtube</span></a></li>
+                <li><a href="https://www.instagram.com/netr4h/"><span class="center-nav-label">Instagram</span></a></li>
             </ul>
         </div>
     </header>
-    <section class="sections" style="height: 512px; background-color:#F8C7CC">
-        <h1 id="bob-ani">Hello There!</h1>
-    
+
+    <main>
+    <section class="sections flex">
+        <h1 id="title-image">
+            <img class="responsiveImage" src="content/neth.svg" alt="mylogo">
+        </h1>
+        <button onclick="goToProjects()" onmouseover="AniFadeIn()" onmouseout="AniFadeOut()" class="goToProjects">Projects</button>
+        <div id="sun"></div>
+        <div id="mainbg"></div>
+        <img class="responsiveImage" id="gif-thing" src="content/weblogo.gif" alt="lazy logo" style="max-width: 400px;">
     </section>
-    <section class="sections-proceeding" style="height: 1180px; background-color: #81A684;" >
-        <div>
-            <div id="floater-title" style="background-color: #F8C7CC;">
-                <span id="text-big">
-                    About me
-                </span>
-            </div>
-            <div>
-                <p style="margin-top: 0; margin-bottom: 0; padding: 25%;">
-                    I am a college student learning things from Programming, Graphics, Music, and occationally Game Dev in my spare time. I used to be a Computer Science major
-                    but recently switched to a IT/ Web Dev to pursue UI development. I plan to create many more projects centered around graphics, programming, 
-                    and maybe make my own game! Who knows?
-                </p>
-            </div>
+
+    <section class="sections-projects">
+        <div><h1 class="bottom-border-curved text-center" style="color: #ffcf28; margin: 20px;">Videos & Graphics</h1></div>
+        <div class="grid">
+            <iframe class="responsiveImage" src="https://www.youtube.com/embed/fuVJcYk2hsY" title="YouTube video player" allowfullscreen></iframe>
+            <img class="responsiveImage" src="content/streamicons.svg" alt="icons" style="max-height: 315px;">
+            <iframe  class="responsiveImage" src="https://www.youtube.com/embed/WI3NFR__dGM" title="YouTube video player"  allowfullscreen></iframe>
+            <img class="responsiveImage" src="content/sc2.jpg" alt="fake team logo" style="max-height: 315px; max-width: 315px;">
+            <iframe  class="responsiveImage" src="https://www.youtube.com/embed/gE3hf6tkzOs" title="YouTube video player" allowfullscreen></iframe>
+            <img class="responsiveImage" src="content/perm.png" alt="fake team logo" style="max-height: 315px; max-width: 315px;">
+        </div>
+        
+        <div class="grid-onecol">
             
         </div>
+        <div class="grid-onecol">
 
-    </section>
-    <section class="sections-proceeding" style="height: 1180px; background-color: #466060">
-        <div id="floater-title" style="background-color: #81A684;">
-            <span id="text-big">
-                Projects
-            </span>
         </div>
-    </section>
-    <section class="sections" style="height: 1180px; background-color: #F8C7CC">
-        <div id="floater-title" style="background-color: #466060;">
-            <span id="text-big">
-                Plans
-            </span>
-        </div>
-        <div id="center">
-        <div id="section-grid">
-            <p>Currently I am: </p>
-            <p>Tomorrow I am: </p>
-        </div>
-        </div>
+        <h1 class="text-center" style="color: #ffcf28; margin: 20px;">note: Some songs that I've used do have explicit lyrics</h1>
     </section>
 
+    <footer style="height: 540px; background-color: #0E0F19">
+        <p style="color: cyan; font-size: 3em; margin: 40px; position: relative; right: 50px;">Interested?</p>
+        <p style="color: white;">shoot me an <span style="color: #ffcf28; cursor: pointer;" onclick="window.location.href = 'contact.html' ">email!</span></p>
+    </footer>
+    </main>
     
     </body> 
 
-
-    </div>
 </html> 
