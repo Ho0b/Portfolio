@@ -6,6 +6,7 @@
     --duskGreen: #466060;
     --darkGreen: #0E0F19;
     --smoothFont: 'Josefin Sans', sans-serif;
+    --sun_gifpos: 200px;
 }
 html{
     scroll-behavior: smooth;
@@ -17,63 +18,13 @@ html:-webkit-scrollbar{
 
 /* CLASSES */
 
-.sections{
-    height: 1080px;
-    font-family: inherit;
-    padding-top: 50px;
-    margin: 0;
-    border-radius: 0px 0px 15px 15px;
-    background-color: #f8c4cc;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-}
-
-.sections h1{
-    position: relative;
-    display: inline;
-    text-align: center;
-    margin-right: 45%;
-    margin-left: auto;
-    font-size: 3em;
-    z-index: 1;
-    bottom: -5%;
-}
-
-.sections-projects{
-    height: fit-content;
-    display: block;
-    position: relative;
-    padding: 40px;
-    background-image: url("content/mainbgmiddlescroll.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    background-clip: padding-box;
-}
-.sections-projects img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    top: 0px;
-}
-
 .responsiveImage{
     width: 100%;
     max-width: inherit;
     height: auto;
-}
-.goToProjects{
-    top: 540px;
     position: absolute;
-    background: white;
-    padding: 10px;
-    border: 0px;
-    border-radius: 10px 0 10px 0;
-    font-size: 1.2em;
-    z-index: 2;
-    cursor: pointer;
 }
+
 
 .flex{
     display: flex;
@@ -169,7 +120,6 @@ body{
     overflow: auto;
 }
 
-
 iframe{
     aspect-ratio: 16 / 9;
 }
@@ -213,6 +163,8 @@ footer{
     justify-content: center;
     align-items: center;
     flex-flow: column;
+    height: 200px; 
+    background-color: #0E0F19
 }
 
 table{
@@ -228,6 +180,25 @@ table tr{
 table th{
     width: 10%;
     height: 40px;
+}
+
+section{
+    height: 1080px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section:nth-child(1){
+    background-color: var(--pastelPink);
+    background-image: url(content/mainbg.svg);
+    background-size: cover;
+    background-position: bottom;
+}
+section:nth-child(2){
+    background-image: url(content/mainbgmiddlescroll.svg);
+    background-size: cover;
+    background-position: top;
 }
 /* FORM SECTION */
 
@@ -295,6 +266,44 @@ form textarea{
     text-align: center;
 }
 
+#headerImg{
+    position: absolute;
+    top: 0;
+    left: 50px;
+    max-width: 200px;
+}
+
+#introParagraph{
+    position: relative;
+    top: 50px;
+    font-family: monospace;
+    font-size: xx-large;
+    text-align: center;
+}
+
+
+#goToProjects{
+    top: 540px;
+    position: absolute;
+    width: 100px;
+    background: white;
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px 0 10px 0;
+    font-size: 1.2em;
+    z-index: 2;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: .5s;
+}
+
+#goToProjects:hover{
+    transition: .5s;
+    width: 110px;
+    background-color: var(--gGreen);
+}
+
 .center-nav-label{
     position: relative;
     margin: auto;
@@ -319,7 +328,7 @@ form textarea{
     margin-right: auto;
     height: 300px;
     width: 300px;
-    top: 100px;
+    top: var(--sun_gifpos);
     bottom: 0px;
     z-index: 2;
 }
@@ -357,27 +366,16 @@ form textarea{
     text-decoration: none;
     height: 30px;
 }
-#mainbg{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    background-image: url("content/mainbg.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    z-index: 1;
-    transition: 3s ease-in-out;
-}
 #sun{
     position: fixed;
+    top: var(--sun_gifpos);
     height: 300px;
     width: 300px;
     z-index: 0;
     border: 0px;
     border-radius: 50%;
     background-color: #ffcf28;
-    transition: 1s;
+    opacity: 1;
 }
 
 #title-image{
@@ -391,21 +389,6 @@ form textarea{
 
 
 /* animation */
-
-#pulsaing-ani{
-    animation: pulsani 3s ease-in-out infinite;
-}
-@keyframes pulsani{
-    0%{
-        width: 100px;
-    }
-    50%{
-        width: 110px;
-    }
-    100%{
-        width: 100px;
-    }
-}
 
 
 /* Fading animations */
