@@ -2,24 +2,9 @@ var headPos = window.scrollY;
 
 window.addEventListener('scroll', function() {
     headPos = window.scrollY;
+    visi();
+    transitionNight();
 });
-
-function goToProjects(){
-    window.scrollTo(0, 1238);
-}
-
-// gotoProjects fade
-
-function AniFadeIn(){
-    document.querySelector(".goToProjects").classList.add("fadeanimation-in");
-    document.querySelector(".goToProjects").classList.remove("fadeanimation-out");
-}
-function AniFadeOut(){
-    document.querySelector(".goToProjects").classList.remove("fadeanimation-in");
-    document.querySelector(".goToProjects").classList.add("fadeanimation-out");
-}
-
-window.addEventListener('scroll', visi);
 
 // goBackUp button;
 function visi(){
@@ -32,27 +17,6 @@ function visi(){
         document.getElementById("goBackUp").style.opacity = "1";
         document.getElementById("goBackUp").style.right = "20px";
     }
-}
-
-window.addEventListener('scroll', titleBgChange);
-// background change on scroll
-function titleBgChange(){
-
-    if(headPos > 400){
-        document.querySelector(".sections").classList.add("bgfadein");
-        document.querySelector("#mainbg").style.backgroundImage = "url(content/mainbgnight.svg)";
-        document.querySelector(".sections-projects").style.backgroundImage = "url(content/mainbgmiddle.svg)";
-    } else {
-        document.querySelector(".sections").classList.remove("bgfadein");
-        document.querySelector("#mainbg").style.backgroundImage = "url(content/mainbg.svg)";
-        document.querySelector(".sections-projects").style.backgroundImage = "url(content/mainbgmiddlescroll.svg)";
-    };
-    if(headPos > 887){
-        document.querySelector("#sun").style.visibility = "hidden";
-    } else {
-        document.querySelector("#sun").style.visibility = "visible";
-    }
-    
 }
 
 // menu-button
@@ -71,3 +35,21 @@ function menuBtn() {
         document.querySelector("#title-image").style.visibility = "visible";
     };
 };
+
+function transitionNight(){
+    if (headPos > 210){
+        document.querySelector("#sun").style.opacity = "0";
+        document.querySelector("section:nth-child(1)").style.backgroundImage = "url(content/mainbgnight.svg)";
+        document.querySelector("section:nth-child(2)").style.backgroundImage = "url(content/mainbgmiddle.svg)";
+        document.querySelector("section:nth-child(1)").style.backgroundColor = "#0E0F19";
+        document.querySelector("#introParagraph").style.color = "#f8c4cc";
+    }
+    if (headPos < 210){
+        document.querySelector("#sun").style.opacity = "1";
+        document.querySelector("section:nth-child(1)").style.backgroundImage = "url(content/mainbg.svg)";
+        document.querySelector("section:nth-child(2)").style.backgroundImage = "url(content/mainbgmiddlescroll.svg)";
+        document.querySelector("section:nth-child(1)").style.backgroundColor = "#f8c4cc";
+        document.querySelector("#introParagraph").style.color = "white";
+    }
+
+}
