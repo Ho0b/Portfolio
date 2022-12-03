@@ -4,7 +4,10 @@ window.addEventListener('scroll', function() {
     headPos = window.scrollY;
     visi();
     transitionNight();
+    closeHamburger();
 });
+
+window.addEventListener("load", addCloseToHamburger);
 
 // goBackUp button;
 function visi(){
@@ -25,16 +28,27 @@ let menuOpen = false;
 function menuBtn() {
     if (!menuOpen) {
         document.querySelector("#menu").classList.add("open");
+        document.querySelector("#menu").classList.replace("close", "open");
         menuOpen = true;
         document.querySelector("#hideli").id = "showli";
-        document.querySelector("#title-image").style.visibility = "hidden";
     } else {
-        document.querySelector("#menu").classList.remove("open");
+        document.querySelector("#menu").classList.replace("open", "close");
         menuOpen = false;
         document.querySelector("#showli").id = "hideli";
-        document.querySelector("#title-image").style.visibility = "visible";
     };
 };
+
+function addCloseToHamburger(){
+    document.querySelector("#menu").classList.add("close");
+}
+
+function closeHamburger(){
+    if (menuOpen === true && headPos > 100){
+        document.querySelector("#menu").classList.replace("open", "close");
+        menuOpen = false;
+        document.querySelector("#showli").id = "hideli";
+    }
+}
 
 function transitionNight(){
     if (headPos > 210){
