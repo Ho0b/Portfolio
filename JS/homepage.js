@@ -37,13 +37,11 @@ function transitionNight(){
         document.querySelector("#sun").style.opacity = "1";
         document.querySelector("section:nth-child(1)").id = "home_sect1";
         document.querySelector("section:nth-child(2)").id = "home_sect2";
-        document.querySelector("#introParagraph").style.color = "white";
     }
     if (headPos > 210){
         document.querySelector("#sun").style.opacity = "0";
         document.querySelector("section:nth-child(1)").id = "home_sect1-change";
         document.querySelector("section:nth-child(2)").id = "home_sect2-change";
-        document.querySelector("#introParagraph").style.color = "#f8c4cc";
     }
 
 }
