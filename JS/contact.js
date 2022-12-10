@@ -12,5 +12,6 @@ function smbtnFadeOut(){
 window.onload = function(){
     document.querySelector("input[type='name']").value = '';
     document.querySelector("input[type='email']").value = '';
+    document.querySelector("input[type='tel']").value = '';
     document.querySelector("textarea").value ='';
 }

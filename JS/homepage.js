@@ -1,13 +1,22 @@
 var headPos = window.scrollY;
 
+var projectPopup = document.getElementsByClassName(".projectsPopup");
+
 window.addEventListener('scroll', function() {
     headPos = window.scrollY;
     visi();
     transitionNight();
-    closeHamburger();
+    revProjects();
+    callSect3Animcation();
 });
 
-window.addEventListener("load", addCloseToHamburger);
+window.addEventListener("load", function(){
+    addThingsOnLoad();
+});
+
+function addThingsOnLoad(){
+    document.querySelector("section:nth-child(1)").id = "home_sect1";
+}
 
 // goBackUp button;
 function visi(){
@@ -22,48 +31,33 @@ function visi(){
     }
 }
 
-// menu-button
-let menuOpen = false;
-
-function menuBtn() {
-    if (!menuOpen) {
-        document.querySelector("#menu").classList.add("open");
-        document.querySelector("#menu").classList.replace("close", "open");
-        menuOpen = true;
-        document.querySelector("#hideli").id = "showli";
-    } else {
-        document.querySelector("#menu").classList.replace("open", "close");
-        menuOpen = false;
-        document.querySelector("#showli").id = "hideli";
-    };
-};
-
-function addCloseToHamburger(){
-    document.querySelector("#menu").classList.add("close");
-}
-
-function closeHamburger(){
-    if (menuOpen === true && headPos > 100){
-        document.querySelector("#menu").classList.replace("open", "close");
-        menuOpen = false;
-        document.querySelector("#showli").id = "hideli";
-    }
-}
 
 function transitionNight(){
-    if (headPos > 210){
-        document.querySelector("#sun").style.opacity = "0";
-        document.querySelector("section:nth-child(1)").style.backgroundImage = "url(content/mainbgnight.svg)";
-        document.querySelector("section:nth-child(2)").style.backgroundImage = "url(content/mainbgmiddle.svg)";
-        document.querySelector("section:nth-child(1)").style.backgroundColor = "#0E0F19";
-        document.querySelector("#introParagraph").style.color = "#f8c4cc";
-    }
     if (headPos < 210){
         document.querySelector("#sun").style.opacity = "1";
-        document.querySelector("section:nth-child(1)").style.backgroundImage = "url(content/mainbg.svg)";
-        document.querySelector("section:nth-child(2)").style.backgroundImage = "url(content/mainbgmiddlescroll.svg)";
-        document.querySelector("section:nth-child(1)").style.backgroundColor = "#f8c4cc";
+        document.querySelector("section:nth-child(1)").id = "home_sect1";
+        document.querySelector("section:nth-child(2)").id = "home_sect2";
         document.querySelector("#introParagraph").style.color = "white";
     }
+    if (headPos > 210){
+        document.querySelector("#sun").style.opacity = "0";
+        document.querySelector("section:nth-child(1)").id = "home_sect1-change";
+        document.querySelector("section:nth-child(2)").id = "home_sect2-change";
+        document.querySelector("#introParagraph").style.color = "#f8c4cc";
+    }
 
+}
+
+// dialog
+
+function revProjects(){
+    if (headPos > 525){
+        document.querySelector(".projectsPopup").classList.add("projectsPopup-show");
+    }
+}
+
+function callSect3Animcation(){
+    if (headPos > 1500){
+        document.querySelector(".steveFall").classList.add("steveFallAnimation");
+    }
 }

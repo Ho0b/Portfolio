@@ -1,75 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head> 
-        <title> 
-            Netra Hun
-        </title>
-        <meta charset="utf-8"> 
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet"> 
-        <link rel="icon" type="image/x-icon" href="content/favicn.svg">
+<!--student name: Netra Hun 
+        filename: index.html
+        date: 12/01/2022
+-->
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        
-        
-    </head> 
+<head>
+    <title>
+        Netra Hun
+    </title>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="Hello, my name is Netra and I am a design student and programmer! and welcome to my portfolio">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="content/favicn.svg">
 
-    <body>
-        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <!-- this is for ajusting homepage feat -->
     <script src="JS/homepage.js"></script>
-    <div id="goBackUp" onclick="window.scrollTo(0, 0)" style="visibility: hidden;"><img src="content/uparrow.svg" alt="up arrow"></div>
-    
-    
-    <div class="mnu-btn" onclick="menuBtn()">
-        <div class="mnu-btn_burger"></div>
-    </div>
+    <!-- this is for changing the menu -->
+    <script src="JS/menu.js"></script>
+
+    <div id="goBackUp" onclick="window.scrollTo(0, 0)" style="visibility: hidden;"><img src="content/uparrow.svg"
+            alt="up arrow"></div>
+
+
+    <!-- button for menu when on mobile and tablet -->
+    <button onclick="menuBtn()" class="mnu-btn">
+        <span class="ham-top"></span>
+        <span class="ham-middle"></span>
+        <span class="ham-bottom"></span>
+    </button>
+
+    <!-- hamburger nav -->
+
     <div id="menu">
-        <div id="hideli">
+        <nav id="hideli">
             <ul>
-                <li><img src="content/home.svg" alt="home icon"><span class="text-center">Home</span></li>
-                <li><a href="contact.html"><img src="content/contact.svg" alt="contact icon"><span class="text-center">Contact</span></a></li>
-                <li><a href="aboutme.html"><img src="content/about.svg" alt="about icon"><span class="text-center">About</span></a></li>
-                <li><a href="https://www.youtube.com/channel/UC5dQA0jgp4UpfdWrmfvPFMg"><img src="content/youtubeIco.svg" alt="YoutubeIcon"><span class="text-center">Youtube</span></a></li>
-                <li><a href="https://www.instagram.com/netr4h/"><img src="content/Instagramico.svg" alt="InstagramIcon"><span class="text-center">Instagram</span></a></li>
+                <li><a href="bootstrap/bootstrap.html">Boostrap Version</a></li>
+                <li><a href="contactme.html"><img src="content/contact.svg" alt="contact icon"><span
+                            class="text-center">Contact</span></a></li>
+                <li><a href="aboutme.html"><img src="content/about.svg" alt="about icon"><span
+                            class="text-center">About</span></a></li>
+                <li><a href="blog.html"><img src="content/blog.svg" alt="blog icon"><span
+                            class="text-center">Blog</span></a></li>
+                <li><a href="workbg.html"><img src="content/work.svg" alt="work icon"><span
+                            class="text-center">Work</span></a></li>
+
+                <li><a href="https://www.youtube.com/channel/UC5dQA0jgp4UpfdWrmfvPFMg"><img src="content/youtubeIco.svg"
+                            alt="YoutubeIcon"><span class="text-center">Youtube</span></a></li>
+                <li><a href="https://www.instagram.com/netr4h/"><img src="content/Instagramico.svg"
+                            alt="InstagramIcon"><span class="text-center">Instagram</span></a></li>
             </ul>
-            </div>
+        </nav>
     </div>
+
+    <!-- NAvigation -->
 
     <header>
         <nav class="right">
             <ul>
-                <li><a href="#main"><img src="content/home.svg" alt="home icon"><span class="center-nav-label">Home</span></a></li>
-                <li><a href="contact.html"><img src="content/contact.svg" alt="contact icon"><span class="center-nav-label">Contact</span></a></li>
-                <li><a href="aboutme.html"><img src="content/about.svg" alt="about icon"><span class="center-nav-label">About</span></a></li>
-                <li><a href="https://www.youtube.com/channel/UC5dQA0jgp4UpfdWrmfvPFMg"><img src="content/youtubeIco.svg" alt="YoutubeIcon"><span class="center-nav-label">Youtube</span></a></li>
-                <li><a href="https://www.instagram.com/netr4h/"><img src="content/Instagramico.svg" alt="InstagramIcon"><span class="center-nav-label">Instagram</span></a></li>
+                <li><a href="bootstrap/bootstrap.html" class="center-nav-label">Boostrap Version</a></li>
+                <li><a href="contactme.html"><img src="content/contact.svg" alt="contact icon"><span
+                            class="center-nav-label">Contact</span></a></li>
+                <li><a href="aboutme.html"><img src="content/about.svg" alt="about icon"><span
+                            class="center-nav-label">About</span></a></li>
+                <li><a href="blog.html"><img src="content/blog.svg" alt="blog icon"><span
+                            class="center-nav-label">Blog</span></a></li>
+                <li><a href="workbg.html"><img src="content/work.svg" alt="work icon"><span
+                            class="center-nav-label">work</span></a></li>
+
+                <li><a href="https://www.youtube.com/channel/UC5dQA0jgp4UpfdWrmfvPFMg"><img src="content/youtubeIco.svg"
+                            alt="YoutubeIcon"><span class="center-nav-label">Youtube</span></a></li>
+                <li><a href="https://www.instagram.com/netr4h/"><img src="content/Instagramico.svg"
+                            alt="InstagramIcon"><span class="center-nav-label">Instagram</span></a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- main area -->
+
     <main id="main">
 
-    <section>
-        <img class="responsiveImage" id="headerImg" src="content/neth.svg" alt="mylogo">
-        <p id="introParagraph">Hi, I am a design & programming student: everything here was all created by me</p>
-        <a href="#home-2nd" class="flex pos-center-absolute text-large text-nodecor"><span class="text-color-white">check out my projects</span></a>
-        <div id="sun"></div>
-        <img class="responsiveImage" id="gif-thing" src="content/weblogo.gif" alt="lazy logo" style="max-width: 400px;">
-    </section>
+        <section class="sct-flex" id="home_sect1">
+            <img class="responsiveImage" id="headerImg" src="content/neth.svg" alt="mylogo">
+            <h2 id="introParagraph">Hi, I am a design & programming student: everything here was all created by me</h2>
+            <a href="#home_sect2" class="flex pos-center-absolute text-large text-nodecor"><span
+                    class="text-invert">check out my projects</span></a>
+            <div id="sun"></div>
+            <img class="responsiveImage" id="gif-thing" src="content/weblogo.gif" alt="lazy logo"
+                style="max-width: 400px;">
+        </section>
 
-    <section id="home-2nd">
-        <button id="seeProjects" onclick="">Projects</button>
-    </section>
+        <section class="sct-flex" id="home_sect2">
+
+
+            <h1 class="text-center text-color-white text-bold" id="galaryText">Gallary</h1>
+            <div class="projectsPopup scroll-snap">
+                <div><iframe src="https://www.youtube.com/embed/WI3NFR__dGM" title="YouTube video player"></iframe>
+                </div>
+                <div>
+                    <figure><img src="content/perm.png" alt="a little image of my mash">
+                        <figcaption>A little mash up of mario and goomba</figcaption>
+                    </figure>
+                </div>
+                <div><iframe src="https://www.youtube.com/embed/fuVJcYk2hsY" title="YouTube video player"></iframe>
+                </div>
+                <div></div>
+            </div>
+            <div id="scrollButtons">
+                <button onclick="scrollOnClickUp()" id="back-button"><span class="text-large">🠩</span></button>
+                <button onclick="scrollOnClickDown()" id="forward-button"><span class="text-large">🠫</span></button>
+            </div>
+
+        </section>
+
+        <section class="sct-grid" id="home_sect3">
+            <h2 class="text-center text-color-white">When I am not creating, I love to play video games, and
+                fun fact: most of my inspiration come from games</h2>
+            <img class="steveFall" src="content/stevefall.png" alt="steve falling picture">
+        </section>
+
+    </main>
 
     <footer>
-        <p style="color: cyan; font-size: 3em; margin: 40px; position: relative; right: 50px;">Interested?</p>
-        <p style="color: white;">shoot me an <span style="color: #ffcf28; cursor: pointer;" onclick="window.location.href = 'contact.html' ">email!</span></p>
+        <p class="text-center">if you're interested, send me an <a href="contactme.html" class="text-nodecor" style="color:yellow">email</a></p>
+        <span>connect with me through</span>
+        <div class="socialMedias">
+            <a href="https://www.youtube.com/channel/UC5dQA0jgp4UpfdWrmfvPFMg"><img src="content/youtubeIco.svg" alt="YoutubeIcon"></a>
+            <a href="https://www.instagram.com/netr4h/"><img src="content/Instagramico.svg" alt="InstagramIcon"></a>
+        </div>
+        created by Netra Hun
     </footer>
-    </main>
-    
-    </body> 
 
-</html> 
+    <!-- script for handing the scrolling of projectss Section -->
+    <script>
+        let projectPopupScroll = document.querySelector("div.projectsPopup");
+        // scroling inside projectsPopup
+
+
+        function scrollOnClickUp() {
+            projectPopupScroll.scrollTop -= (projectPopupScroll.clientHeight);
+        }
+        function scrollOnClickDown() {
+            projectPopupScroll.scrollTop += (projectPopupScroll.clientHeight);
+        }
+
+    </script>
+
+</body>
+
+</html>
