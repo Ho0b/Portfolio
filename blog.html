@@ -17,6 +17,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="content/favicn.svg">
     <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        * {
+            color: white;
+        }
+    </style>
+
 </head>
 
 <body id="blog-body">
@@ -25,7 +33,7 @@
     <script src="JS/menu.js"></script>
 
     <!-- button for menu when on mobile and tablet -->
-    <button onclick="menuBtn()" class="mnu-btn">
+    <button onclick="menuBtn()" class="mnu-btn" aria-label="hamburgerButton">
         <span class="ham-top"></span>
         <span class="ham-middle"></span>
         <span class="ham-bottom"></span>
@@ -78,17 +86,16 @@
     <main>
 
         <section class="sct-flex mar-rl-a" id="blog-sect1">
-            <h2 class="text-color-white text-center">Welcome to my blog page, this is where I can share my ideas</h2>
+            <h2 class=" text-center">Welcome to my blog page, this is where I can share my ideas</h2>
             
             <article>
-                <h2 class="text-color-white text-center">The Witch of the Sea Sands</h2>
+                <h2 class="text-center">The Witch of the Sea Sands</h2>
                 <div class="sct-grid">
-                    <p class="text-color-white"> Once a lifetime ago, there lived a witch on the coast of a land, and on this land she took care of her sand. She took care of her sand and took care of her cannned worm band. They were joyus, happily living in bliss, avoiding anything dangerous.</p>
+                    <p style="background-color: black; border: 0px solid transparent; border-radius: 10px; padding: 10px;"> Once a lifetime ago, there lived a witch on the coast of a land, and on this land she took care of her sand. She took care of her sand and took care of her cannned worm band. They were joyus, happily living in bliss, avoiding anything dangerous.</p>
                     <aside><figure><img src="content/aiArtStableDiffusion.jpg" alt="a ai rendering of sandwitch, using stable diffusion"><figcaption class="text-color-white">a picture of a sandwitch, from ai stable diffusion</figcaption></figure></aside>
                 </div>
             </article>
 
-            <p class="text-center text-color-white">more ideas coming soon!</p>
         </section>
 
     </main>

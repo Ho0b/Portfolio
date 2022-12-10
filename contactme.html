@@ -30,7 +30,7 @@
     <script src="JS/contact.js"></script>
 
     <!-- button for menu when on mobile and tablet -->
-    <button onclick="menuBtn()" class="mnu-btn">
+    <button onclick="menuBtn()" class="mnu-btn" aria-label="hamburgerButton">
         <span class="ham-top"></span>
         <span class="ham-middle"></span>
         <span class="ham-bottom"></span>
@@ -83,13 +83,13 @@
 
     <main>
 
-        <section id="contact-sect1 mar-rl-a">
+        <section id="contact-sect1" class="mar-rl-a">
             <h1 class="text-center text-color-white">Contact me with this form</h1>
             <form action="https://formsubmit.co/65fff4546825b9d46e504fbdcab8c9cc" method="POST" target="_blank">
-                <input type="text" name="name" id="name" placeholder="Full Name">
-                <input type="email" name="email" id="email" placeholder="Email">
-                <input type="tel" name="number" id="phone" placeholder="123-456-7890">
-                <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+                <input type="text" name="name" id="name" placeholder="Full Name" aria-label="NameLabel">
+                <input type="email" name="email" id="email" placeholder="Email" aria-label="EmailLabel">
+                <input type="tel" name="number" id="phone" placeholder="123-456-7890" aria-label="PhoneLabel">
+                <textarea name="message" cols="30" rows="10" placeholder="Message" aria-label="MessageLabel"></textarea>
                 <input onmouseover="smbtnFadeIn()" onmouseout="smbtnFadeOut()" type="submit" value="Submit"
                     id="submitBtn">
             </form>

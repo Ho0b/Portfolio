@@ -21,6 +21,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <style>
+        *{
+            color: white;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -35,7 +41,7 @@
 
 
     <!-- button for menu when on mobile and tablet -->
-    <button onclick="menuBtn()" class="mnu-btn">
+    <button onclick="menuBtn()" class="mnu-btn" aria-label="hamburgerButton">
         <span class="ham-top"></span>
         <span class="ham-middle"></span>
         <span class="ham-bottom"></span>
@@ -75,7 +81,7 @@
                 <li><a href="blog.html"><img src="content/blog.svg" alt="blog icon"><span
                             class="center-nav-label">Blog</span></a></li>
                 <li><a href="workbg.html"><img src="content/work.svg" alt="work icon"><span
-                            class="center-nav-label">work</span></a></li>
+                            class="center-nav-label">Work</span></a></li>
 
                 <li><a href="https://www.youtube.com/channel/UC5dQA0jgp4UpfdWrmfvPFMg"><img src="content/youtubeIco.svg"
                             alt="YoutubeIcon"><span class="center-nav-label">Youtube</span></a></li>
@@ -91,9 +97,8 @@
 
         <section class="sct-flex" id="home_sect1">
             <img class="responsiveImage" id="headerImg" src="content/neth.svg" alt="mylogo">
-            <h2 id="introParagraph">Hi, I am a design & programming student: everything here was all created by me</h2>
-            <a href="#home_sect2" class="flex pos-center-absolute text-large text-nodecor"><span
-                    class="text-invert">check out my projects</span></a>
+            <h2 id="introParagraph" style="color: #0b0b0b;">Hi, I am a design & programming student: everything here was all created by me</h2>
+            <a href="#home_sect2" class="flex pos-center-absolute text-large text-nodecor"><span style="background-color: black; border: 0px solid transparent; border-radius: 10px; padding: 10px;">check out my projects</span></a>
             <div id="sun"></div>
             <img class="responsiveImage" id="gif-thing" src="content/weblogo.gif" alt="lazy logo"
                 style="max-width: 400px;">
@@ -102,7 +107,8 @@
         <section class="sct-flex" id="home_sect2">
 
 
-            <h1 class="text-center text-color-white text-bold" id="galaryText">Gallary</h1>
+            <h1 class="text-center text-bold" id="galaryText" 
+            style="background-color: black; border: 0px solid transparent; border-radius: 10px; padding: 10px;">Gallary</h1>
             <div class="projectsPopup scroll-snap">
                 <div><iframe src="https://www.youtube.com/embed/WI3NFR__dGM" title="YouTube video player"></iframe>
                 </div>
@@ -116,14 +122,14 @@
                 <div></div>
             </div>
             <div id="scrollButtons">
-                <button onclick="scrollOnClickUp()" id="back-button"><span class="text-large">🠩</span></button>
-                <button onclick="scrollOnClickDown()" id="forward-button"><span class="text-large">🠫</span></button>
+                <button onclick="scrollOnClickUp()" id="back-button"><span class="text-large" style="color:black">🠩</span></button>
+                <button onclick="scrollOnClickDown()" id="forward-button"><span class="text-large" style="color: black">🠫</span></button>
             </div>
 
         </section>
 
         <section class="sct-grid" id="home_sect3">
-            <h2 class="text-center text-color-white">When I am not creating, I love to play video games, and
+            <h2 class="text-center" style="background-color: black; border: 0px solid transparent; border-radius: 10px; padding: 10px;">When I am not creating, I love to play video games, and
                 fun fact: most of my inspiration come from games</h2>
             <img class="steveFall" src="content/stevefall.png" alt="steve falling picture">
         </section>
