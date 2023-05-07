@@ -1,166 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--student name: Netra Hun 
-        filename: index.html
-        date: 12/01/2022
--->
-
 
 <head>
-    <title>
-        Netra Hun
-    </title>
-    <meta charset="utf-8">
-    <meta name="description"
-        content="Hello, my name is Netra and I am a design student and programmer! and welcome to my portfolio">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netra Hun</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- imported google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="content/favicn.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        *{
-            color: white;
-        }
-    </style>
+    <meta name="description" content="a portfolio of A nerd on the internet">
 
 </head>
 
 <body>
 
-    <!-- this is for ajusting homepage feat -->
-    <script src="JS/homepage.js"></script>
-    <!-- this is for changing the menu -->
-    <script src="JS/menu.js"></script>
-
-    <div id="goBackUp" onclick="window.scrollTo(0, 0)" style="visibility: hidden;"><img src="content/uparrow.svg"
-            alt="up arrow"></div>
-
-
-    <!-- button for menu when on mobile and tablet -->
-    <button onclick="menuBtn()" class="mnu-btn" aria-label="hamburgerButton">
-        <span class="ham-top"></span>
-        <span class="ham-middle"></span>
-        <span class="ham-bottom"></span>
-    </button>
-
-    <!-- hamburger nav -->
-
-    <div id="menu">
-        <nav id="hideli">
-            <ul>
-                <li><a href="contactme.html"><img src="content/contact.svg" alt="contact icon"><span
-                            class="text-center">Contact</span></a></li>
-                <li><a href="aboutme.html"><img src="content/about.svg" alt="about icon"><span
-                            class="text-center">About</span></a></li>
-                <li><a href="blog.html"><img src="content/blog.svg" alt="blog icon"><span
-                            class="text-center">Blog</span></a></li>
-                <li><a href="workbg.html"><img src="content/work.svg" alt="work icon"><span
-                            class="text-center">Work</span></a></li>
-
-                <li><a href="https://www.youtube.com/channel/UC5dQA0jgp4UpfdWrmfvPFMg"><img src="content/youtubeIco.svg"
-                            alt="YoutubeIcon"><span class="text-center">Youtube</span></a></li>
-                <li><a href="https://www.instagram.com/netr4h/"><img src="content/InstagramIco.svg"
-                            alt="InstagramIcon"><span class="text-center">Instagram</span></a></li>
+    <div id="wrapper">
+        
+        <header>
+            <div>
+                <h1 id="greetingText">Hello!, My name is</h1>
+            </div>
+            <div id="header_grid">
+                <img src="content/svg/neth.svg" height="256" alt="a logo of my name">
+                <img src="content/weblogo.gif" height="256" alt="a animated gif of a drawing of me">
+                <p class="t_c_w t_center bg_black border-round-1em pad1em">Progamming and Design Student</p>
+            </div>
+            <ul id="socialLinks">
+                <li><a href="http://www.youtube.com/@hubbas" target="_blank"><img src="content/icons/youtubeicon.png"
+                            alt="youtube icon"><span>YOUTUBE</span></a></li>
+                <li><a href="https://www.instagram.com/netr4h/" target="_blank"><img src="content/svg/InstagramIco.svg"
+                            alt="instagram icon"><span>INSTAGRAM</span></a></li>
             </ul>
-        </nav>
+
+        </header>
+
+        <main>
+            <div class="grid">
+
+                <nav class="floatingAnimation">
+                    <ul>
+                        <li class="t_center"><button onclick="switchSectionGallery()">Gallery</button></li>
+                        <li class="t_center"><button onclick="switchSectionWork()">Work</button></li>
+                        <li class="t_center"><button onclick="switchSectionSkills()">Skills</button></li>
+                        <li class="t_center"><button onclick="switchSectionAbout()">About</button></li>
+                        <li class="t_center"><button onclick="switchSectionContact()">Contact</button></li>
+                    </ul>
+                </nav>
+
+                <section class="openedSection" id="sect-gal">
+                    <span class="headingText t_c_b">My Digital Gallery</span>
+                    <ul>
+                        <li><iframe src="https://www.youtube.com/embed/5FeuDm7I4Sk" title="YouTube video player"
+                                allowfullscreen></iframe></li>
+                        <li><img class="galImg" src="content/renders/blender.png" alt="3D model of a blender"></li>
+                        <li><img class="galImg" src="content/renders/PortalGun.png"
+                                alt="3D model of Rick and Morty Portal Gun"></li>
+                        <li><img class="galImg" src="content/renders/capygrass.png" alt="3D capybara on grass"></li>
+                        <li><img class="galImg" src="content/renders/typewriter.png" alt="3D mini typewriter"></li>
+                        <li><iframe src="https://www.youtube.com/embed/05GnB3r6bQY" title="YouTube video player"
+                                allowfullscreen></iframe></li>
+                        <li><iframe src="https://www.youtube.com/embed/WI3NFR__dGM" title="YouTube video player"
+                                allowfullscreen></iframe></li>
+                        <li><iframe src="https://www.youtube.com/embed/-Ymr03GOtwM" title="YouTube video player"
+                                allowfullscreen></iframe></li>
+                        <li><img class="galImg" src="content/logos/handlogo.png" alt="hand logo"></li>
+                        <li><img class="galImg" src="content/logos/mariologo.png" alt="mario logo"></li>
+                        <li><img class="galImg" src="content/logos/pandalogo.jpg" alt="panda logo"></li>
+                        <li><img class="galImg" src="content/logos/teamlogo.jpg" alt="fake team logo"></li>
+                    </ul>
+                </section>
+
+                <section id="sect-work">
+                    <span class="headingText t_c_b">My Work Experience!</span>
+                    <ul>
+                        <li>
+                            <div>
+                                <h2 class="t_center"><a href="https://www.youtube.com/@fixfymobile">FIXFY</a> - Company
+                                    Youtube Channel</h2>
+                                <img src="content/screenshots/fixfyScreenshot.png"
+                                    alt="webpage screenshot of fixfy youtube channel">
+                                <p>This was where I used to work and my job here was to manage the social media
+                                    accounts, edit videos, make thumbnails, icons.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section id="sect-about">
+                    <span class="headingText t_c_b">About Me!</span>
+                    <img src="content/logos/aboutme.png" alt="a cartoon version of me">
+                    <p>
+                        Growing up in a relatively strict home with my dad and aunt who were a bit too controlling
+                        changed me into the person I am today.
+                        While I don't want to blame them for the things they did to me (emotionally) as a kid, don't get
+                        me wrong they are great parents and I love them very much, parts of me still want answers.
+                        My darker half wants to know why they limited so much of my freedom, and said the things they
+                        said but I know now that their intentions were pure.
+                        They instilled so much fear and anger into my head that It made me question whether I should
+                        finish the race or give up entirely. But then I realized something, why continue to hate myself
+                        and my parents for eternity when I can just do more productive things? and so I did.
+                        At age 16 I started learning Photoshop on my own, at age 17, I learned Premiere Pro and
+                        Illustrator, at 18, I dabbed into Blender, After Effects, 21, I took classes in Web development
+                        and Graphic Design, and Now at 22 I am exploring music production.
+                        Made a couple projects since then and I have never been happier. I can safely say my greatest
+                        strength is my willingness to learn and improve, this is my drive.
+                        Although, I am able to learn the things I want. I sometimes get these depression episodes that
+                        makes me want to do nothing nor create.
+                        I have gone to therapy and have been working on these situations but sometimes I just feel like
+                        crap. Often times, It is pressure from my parents mainly my aunt but I've gotten used to it.
+                        These situations made me so caught up in my own head that it becomes hard to focus on I need to
+                        do. My emotions are my greatest weakness, and I don't think any other weakness compares.
+                        I can be filled with so much joy when working on a project one day and the next I stop
+                        everything for a week or more. But recently, I have been experimenting with using my emotions as
+                        a catalyst for my projects, and so far I've enjoyed creating a lot more.
+                        <br>
+                        <br>
+                        - Netra
+                    </p>
+                </section>
+                <section id="sect-skills">
+                    <span class="headingText">My Skills!</span>
+                    <div id="skillsTable">
+                        <div>
+                            <span class="headingText t_c_w">Design Tools</span>
+                            <img src="content/icons/photoshopicon.png" alt=" Adobe Photoshop icon">
+                            <span>Adobe Photoshop - <b>Intermediate</b></span>
+                            <img src="content/icons/premiereproicon.png" alt="adobe premiere pro icon">
+                            <span>Adobe Premiere Pro - <b>Intermediate</b></span>
+                            <img src="content/icons/illustratoricon.png" alt="Adobe Illustrator icon">
+                            <span>Adobe Illustrator - <b>Intermediate</b></span>
+                            <img src="content/icons/blendericon.png" alt="blender icon">
+                            <span>Blender - <b>Intermediate</b></span>
+                        </div>
+                        <div>
+                            <span class="headingText t_c_w">Programming Languages</span>
+                            <img src="content/icons/c++.png" alt="c++ language icon">
+                            <span>C++ - <b>Intermediate</b></span>
+                            <img src="content/icons/java.png" alt="Java language icon">
+                            <span>Java - <b>Intermediate</b></span>
+                            <img src="content/icons/python.png" alt="Python language icon">
+                            <span>Python - <b>Intermediate</b></span>
+                            <img src="content/icons/javacsript.png" alt="JavaScript language icon">
+                            <span>JavaScript - <b>Beginner</b></span>
+                        </div>
+                    </div>
+                </section>
+                <section id="sect-contact">
+                    <span class="headingText t_c_b">Connect With Me!</span>
+
+                    <form action="https://formsubmit.co/65fff4546825b9d46e504fbdcab8c9cc" method="POST" target="_blank"
+                        id="form">
+                        <input type="text" name="name" id="name" placeholder="Full Name:" required
+                            aria-label="NameLabel">
+                        <input type="email" name="email" id="email" placeholder="Email: example@gmail.com" required
+                            aria-label="EmailLabel">
+                        <input type="tel" name="number" id="phone" placeholder="Phone Number: ex. 123-456-7890" required
+                            aria-label="PhoneLabel">
+                        <input type="text" name="message" id="message" placeholder="Message" aria-label="MessageLabel"
+                            required></input>
+                        <input type="submit" id="submit" value="Submit">
+                    </form>
+                </section>
+
+            </div>
+        </main>
+
+        <footer>
+            <a href="#header_grid">Go Backup Button</a>
+        </footer>
+
     </div>
 
-    <!-- NAvigation -->
-
-    <header>
-        <nav class="right">
-            <ul>
-                <li><a href="contactme.html"><img src="content/contact.svg" alt="contact icon"><span
-                            class="center-nav-label">Contact</span></a></li>
-                <li><a href="aboutme.html"><img src="content/about.svg" alt="about icon"><span
-                            class="center-nav-label">About</span></a></li>
-                <li><a href="blog.html"><img src="content/blog.svg" alt="blog icon"><span
-                            class="center-nav-label">Blog</span></a></li>
-                <li><a href="workbg.html"><img src="content/work.svg" alt="work icon"><span
-                            class="center-nav-label">Work</span></a></li>
-
-                <li><a href="https://www.youtube.com/channel/UC5dQA0jgp4UpfdWrmfvPFMg"><img src="content/youtubeIco.svg"
-                            alt="YoutubeIcon"><span class="center-nav-label">Youtube</span></a></li>
-                <li><a href="https://www.instagram.com/netr4h/"><img src="content/InstagramIco.svg"
-                            alt="InstagramIcon"><span class="center-nav-label">Instagram</span></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- main area -->
-
-    <main id="main">
-
-        <section class="sct-flex" id="home_sect1">
-            <img class="responsiveImage" id="headerImg" src="content/neth.svg" alt="mylogo">
-            <h2 id="introParagraph" style="background-color: black; border: 0px solid transparent; border-radius: 10px; padding: 10px;">Hi, I am a design & programming student: everything here was all created by me</h2>
-            <a href="#home_sect2" class="flex pos-center-absolute text-large text-nodecor"><span style="background-color: black; border: 0px solid transparent; border-radius: 10px; padding: 10px;">check out my projects</span></a>
-            <div id="sun"></div>
-            <img class="responsiveImage" id="gif-thing" src="content/weblogo.gif" alt="lazy logo"
-                style="max-width: 400px;">
-        </section>
-
-        <section class="sct-flex" id="home_sect2">
-
-
-            <h1 class="text-center text-bold" id="galaryText" 
-            style="background-color: black; border: 0px solid transparent; border-radius: 10px; padding: 10px;">Gallary</h1>
-            <div class="projectsPopup scroll-snap">
-                <div><iframe src="https://www.youtube.com/embed/WI3NFR__dGM" title="YouTube video player"></iframe>
-                </div>
-                <div>
-                    <figure><img src="content/perm.png" alt="a little image of my mash">
-                        <figcaption>A little mash up of mario and goomba</figcaption>
-                    </figure>
-                </div>
-                <div><iframe src="https://www.youtube.com/embed/fuVJcYk2hsY" title="YouTube video player"></iframe>
-                </div>
-                <div></div>
-            </div>
-            <div id="scrollButtons">
-                <button onclick="scrollOnClickUp()" id="back-button"><span class="text-large" style="color:black">🠩</span></button>
-                <button onclick="scrollOnClickDown()" id="forward-button"><span class="text-large" style="color: black">🠫</span></button>
-            </div>
-
-        </section>
-
-        <section class="sct-grid" id="home_sect3">
-            <h2 class="text-center" style="background-color: black; border: 0px solid transparent; border-radius: 10px; padding: 10px;">When I am not creating, I love to play video games, and
-                fun fact: most of my inspiration come from games</h2>
-            <img class="steveFall" src="content/stevefall.png" alt="steve falling picture">
-        </section>
-
-    </main>
-
-    <footer>
-        <p class="text-center">if you're interested, send me an <a href="contactme.html" class="text-nodecor" style="color:yellow">email</a></p>
-        <span>connect with me through</span>
-        <div class="socialMedias">
-            <a href="https://www.youtube.com/channel/UC5dQA0jgp4UpfdWrmfvPFMg"><img src="content/youtubeIco.svg" alt="YoutubeIcon"></a>
-            <a href="https://www.instagram.com/netr4h/"><img src="content/InstagramIco.svg" alt="InstagramIcon"></a>
-        </div>
-        created by Netra Hun
-    </footer>
-
-    <!-- script for handing the scrolling of projectss Section -->
-    <script>
-        let projectPopupScroll = document.querySelector("div.projectsPopup");
-        // scroling inside projectsPopup
-
-
-        function scrollOnClickUp() {
-            projectPopupScroll.scrollTop -= (projectPopupScroll.clientHeight);
-        }
-        function scrollOnClickDown() {
-            projectPopupScroll.scrollTop += (projectPopupScroll.clientHeight);
-        }
-
-    </script>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
