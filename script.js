@@ -49,5 +49,5 @@ function clearForms(){
     document.querySelector("input#name").value = '';
     document.querySelector("input#email").value = '';
     document.querySelector("input#phone").value = '';
-    document.querySelector("input#message").value = '';
+    document.querySelector("textarea#message").value = '';
 }

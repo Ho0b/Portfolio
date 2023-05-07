@@ -235,6 +235,12 @@ form input#name {
     border: 0px solid transparent;
     border-radius: 1em 1em 0 0;
 }
+form textarea#message{
+    min-height: 256px;
+    max-width: 200px;
+    padding: 1em;
+    border: 0;
+}
 
 form input#submit {
     border: 0px solid transparent;
